@@ -60,8 +60,8 @@ analytics.page('Product', {
 const anonymousId = analytics?._user?.anonymousId();
 
  const appConfig = {
-  accountSid:"AC75903cb51ef4da2b3cdbafed81aae0a4",
-  flexFlowSid:"FOe9b63d0ecee55421275d78cfe46fe687",
+  accountSid:"AC9306ceb69f4b4c93be54da9e18564979",
+  flexFlowSid:"FO9f425d94f148a13e7f94f5409db17824",
   
   context: {
     locationOrigin: window.location.origin,
