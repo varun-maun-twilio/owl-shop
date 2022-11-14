@@ -82,6 +82,15 @@ const anonymousId = analytics?._user?.anonymousId();
             }
         },
         {
+          label: "What is your phone number?",
+          type: "InputItem",
+          attributes: {
+              name: "phoneNumber",
+              type: "text",
+              required: true
+          }
+      },
+        {
             label: "What is your question?",
             type: "TextareaItem",
             attributes: {
@@ -98,10 +107,10 @@ const anonymousId = analytics?._user?.anonymousId();
 };
 
 Twilio.FlexWebChat.Actions.on("afterStartEngagement", (payload) => {
-  const { friendlyName } = payload.formData;
+  const { friendlyName, phoneNumber } = payload.formData;
   if (!friendlyName) return;
 
-  analytics.identify(friendlyName, {name:friendlyName});
+  analytics.identify(friendlyName, {name:friendlyName,phoneNumber});
   
 });
 
